@@ -17,7 +17,11 @@
 
 ---
 
-**EquiFlow** is a production-grade, real-time stock broker dashboard that simulates live market data using Geometric Brownian Motion (GBM). Built with a modern React front-end and a Node.js/Express + Socket.IO back-end, it delivers a premium dark-themed trading terminal experience.
+**EquiFlow** is a production-grade, real-time stock broker dashboard that simulates live market data using Geometric Brownian Motion (GBM). Built with a modern React 19 front-end and a Node.js/Express + Socket.IO back-end, it delivers a premium dark-themed trading terminal experience inspired by professional platforms like Bloomberg Terminal and Robinhood.
+
+The application streams simulated stock prices in real time over WebSockets, renders interactive candlestick charts via TradingView's Lightweight Charts library, and provides a fully functional order book with animated bid/ask depth. Users can place market and limit orders, track their portfolio performance with live P&L calculations, and stay informed through an auto-generated market news feed — all within a sleek, glassmorphism-styled UI with smooth micro-animations.
+
+EquiFlow is designed as a comprehensive full-stack showcase covering real-time data pipelines, WebSocket pub/sub architecture, financial data visualization, state management, and responsive design — making it ideal for learning, demos, or as a foundation for production trading interfaces.
 
 ## 📸 Screenshots
 
@@ -204,8 +208,3 @@ The production-optimized client bundle is output to `client/dist/`.
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
----
-
-<p align="center">
-  Built with ❤️ by the EquiFlow team
-</p>
