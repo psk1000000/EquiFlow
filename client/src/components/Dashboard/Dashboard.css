@@ -1,0 +1,117 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 56px);
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 280px 1fr 300px;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  flex: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Left sidebar */
+.dashboard-sidebar-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  position: sticky;
+  top: 76px;
+  height: fit-content;
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+
+/* Center main area */
+.dashboard-main {
+  min-width: 0;
+}
+
+.dashboard-main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+}
+
+.dashboard-main-header h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.dashboard-main-header span {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.stock-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.dashboard-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  color: var(--text-muted);
+}
+
+.dashboard-empty-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-lg);
+  opacity: 0.5;
+}
+
+.dashboard-empty h3 {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.dashboard-empty p {
+  font-size: var(--font-size-sm);
+}
+
+/* Right sidebar */
+.dashboard-sidebar-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  position: sticky;
+  top: 76px;
+  height: fit-content;
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .dashboard-content {
+    grid-template-columns: 260px 1fr;
+  }
+  .dashboard-sidebar-right {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+    padding: var(--space-lg);
+  }
+  .dashboard-sidebar-left,
+  .dashboard-sidebar-right {
+    position: static;
+    max-height: none;
+  }
+  .stock-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,37 @@
+.price-display {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  border-radius: var(--radius-sm);
+  padding: 2px 6px;
+  margin: -2px -6px;
+  transition: background-color 0.8s ease;
+}
+
+.price-display.flash-green {
+  animation: priceFlashGreen 0.8s ease;
+}
+
+.price-display.flash-red {
+  animation: priceFlashRed 0.8s ease;
+}
+
+.price-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: var(--font-size-2xl);
+  letter-spacing: -0.02em;
+}
+
+.price-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.price-change-arrow {
+  font-size: 0.75rem;
+}

@@ -1,0 +1,62 @@
+.stock-subscriber {
+  padding: var(--space-xl);
+  animation: fadeIn 0.3s ease;
+}
+
+.stock-subscriber h3 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-lg);
+}
+
+.stock-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.stock-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.stock-list-item:hover {
+  border-color: var(--border-medium);
+  background: var(--bg-card-hover);
+}
+
+.stock-list-item-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.stock-list-item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.stock-list-item-ticker {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.stock-list-item-name {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.stock-list-item .btn {
+  min-width: 80px;
+}

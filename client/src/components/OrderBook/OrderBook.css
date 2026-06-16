@@ -1,0 +1,119 @@
+.order-book {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.order-book-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.order-book-header span:nth-child(2) {
+  text-align: right;
+}
+
+.order-book-header span:nth-child(3) {
+  text-align: right;
+}
+
+.order-book-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.order-book-asks {
+  display: flex;
+  flex-direction: column-reverse; /* Asks typically go down towards the spread */
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.order-book-bids {
+  justify-content: flex-start;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2px var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  position: relative;
+}
+
+.order-row:hover {
+  background: var(--bg-card-hover);
+}
+
+.order-row-price {
+  font-weight: 600;
+}
+
+.order-row.ask .order-row-price {
+  color: var(--color-negative);
+}
+
+.order-row.bid .order-row-price {
+  color: var(--color-positive);
+}
+
+.order-row-size {
+  text-align: right;
+  color: var(--text-primary);
+}
+
+.order-row-total {
+  text-align: right;
+  color: var(--text-secondary);
+}
+
+/* Depth background bar */
+.order-row-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 0.18;
+}
+
+.order-row.ask .order-row-bg {
+  background: var(--color-negative);
+}
+
+.order-row.bid .order-row-bg {
+  background: var(--color-positive);
+}
+
+.order-row-content {
+  position: relative;
+  z-index: 1;
+  display: contents;
+}
+
+.order-book-spread {
+  padding: var(--space-sm);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
+}

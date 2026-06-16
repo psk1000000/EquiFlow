@@ -1,0 +1,82 @@
+.active-asset-view {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  animation: fadeInDown 0.4s ease;
+}
+
+.active-asset-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.active-asset-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-xl);
+}
+
+.active-asset-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.active-asset-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.active-asset-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.active-asset-ticker {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  font-family: var(--font-mono);
+  line-height: 1.1;
+}
+
+.active-asset-name {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.active-asset-price-wrap {
+  text-align: right;
+}
+
+.active-asset-chart {
+  flex: 1;
+  min-height: 400px;
+}
+
+.active-asset-orderbook {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.active-asset-orderbook h3 {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .active-asset-view {
+    grid-template-columns: 1fr;
+  }
+}
