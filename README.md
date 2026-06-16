@@ -19,6 +19,20 @@
 
 **EquiFlow** is a production-grade, real-time stock broker dashboard that simulates live market data using Geometric Brownian Motion (GBM). Built with a modern React front-end and a Node.js/Express + Socket.IO back-end, it delivers a premium dark-themed trading terminal experience.
 
+## 📸 Screenshots
+
+### Login
+
+<p align="center">
+  <img src="docs/screenshots/login.png" alt="EquiFlow Login" width="720" />
+</p>
+
+### Trading Dashboard
+
+<p align="center">
+  <img src="docs/screenshots/dashboard.png" alt="EquiFlow Dashboard" width="720" />
+</p>
+
 ## ✨ Features
 
 | Category | Highlights |
@@ -83,7 +97,7 @@ equiflow/
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/equiflow.git
+git clone https://github.com/psk1000000/EquiFlow.git
 cd equiflow
 
 # Install all dependencies (root, server, and client)
