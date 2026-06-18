@@ -7,6 +7,8 @@
  */
 
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { createServer } from 'http';
 import { Server as SocketIOServer } from 'socket.io';
 import cors from 'cors';
@@ -58,6 +60,20 @@ app.use('/api/*', (_req, res) => {
     error: 'API endpoint not found',
   });
 });
+
+// ─── Serve static client build in production ────────────────────────────
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const clientDistPath = path.resolve(__dirname, '../../client/dist');
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(clientDistPath));
+
+  // SPA catch-all — serve index.html for any non-API route
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+}
 
 // ─── Global error handler ───────────────────────────────────────────────
 app.use((err, _req, res, _next) => {

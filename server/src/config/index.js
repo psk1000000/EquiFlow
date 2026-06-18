@@ -14,7 +14,9 @@ const CORS_ORIGINS = [
   'http://localhost:5173',  // Vite dev server
   'http://localhost:4173',  // Vite preview
   'http://localhost:3000',  // Alternate dev port
-];
+  process.env.RENDER_EXTERNAL_URL,  // Render deploy URL (auto-set by Render)
+  process.env.CORS_ORIGIN,          // Custom production origin
+].filter(Boolean);
 
 /**
  * Stock definitions.
